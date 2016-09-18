@@ -6,7 +6,8 @@ export class MainController {
   $http;
   socket;
   todos = [];
-  newTodo = '';
+  newTodo = {};
+  dPickerOpen = false;
 
   /*@ngInject*/
   constructor($http, $scope, socket) {
@@ -29,9 +30,7 @@ export class MainController {
 
   addThing() {
     if(this.newTodo) {
-      this.$http.post('/api/todos', {
-        name: this.newTodo
-      });
+      this.$http.post('/api/todos', this.newTodo);
       this.newTodo = '';
     }
   }
@@ -42,6 +41,13 @@ export class MainController {
 
   deleteThing(todo) {
     this.$http.delete('/api/todos/' + todo._id);
+  }
+
+  openDatePicker() {
+    if (this.dPickerOpen === false)
+      this.dPickerOpen = true;
+    else
+      this.dPickerOpen = false;
   }
 }
 
