@@ -4,8 +4,7 @@ import mongoose from 'mongoose';
 
 var TodoSchema = new mongoose.Schema({
   name: String,
-  info: String,
-  active: Boolean,
+  done: {type: Boolean, default: false},
   date: {type: Date, default: Date.now}
 });
 
