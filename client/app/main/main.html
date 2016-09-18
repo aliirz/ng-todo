@@ -11,7 +11,7 @@
       <h1 class="page-header">To Dos</h1>
       <ul class="list-group" ng-repeat="todo in $ctrl.todos">
         <li class="list-group-item">
-            <p>{{todo.name}} Due by: {{todo.date | date : 'shortDate'}}</p>
+            <p><span>{{todo.name}} Due by: {{todo.date | date : 'shortDate'}}</p>
           <div class="checkbox">
             <label>
               <input ng-click="$ctrl.deleteThing(todo)" type="checkbox"> Done

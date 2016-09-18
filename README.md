@@ -1,9 +1,5 @@
 # ng-todo
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.0.5.
-
-## Getting Started
-
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
@@ -22,7 +18,3 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 ## Build & development
 
 Run `gulp build` for building and `gulp serve` for preview.
-
-## Testing
-
-Running `npm test` will run the unit tests with karma.
